@@ -8,7 +8,11 @@ public class Main {
         
         Arrays.sort(numbers);
 
+        // Test case 1 - searching for a value that exists
         int index = binarySearch(numbers, 619);
+
+        // Test case 2 - searching for value that doesn't exist
+        // int index = binarySearch(numbers, 85);
 
         if (index != -1) {
             System.out.println("Target has been found");
@@ -29,7 +33,7 @@ public class Main {
             else if (nums[mid] > target) right = mid - 1;
             else if (nums[mid] < target) left = mid + 1;
         }
-        
+
         return -1;
     }
 }
